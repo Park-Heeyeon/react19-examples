@@ -19,8 +19,6 @@ function App() {
 
   return (
     <BrowserRouter>
-      <h1>React 18/19 Features</h1>
-
       <nav>
         {routes
           .filter((r) => r.name)

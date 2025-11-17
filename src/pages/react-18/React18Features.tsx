@@ -1,4 +1,4 @@
 const React18Features = () => {
-  return <>18 test</>;
+  return <></>;
 };
 export default React18Features;
