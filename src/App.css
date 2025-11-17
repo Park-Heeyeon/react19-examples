@@ -1,0 +1,12 @@
+nav: {
+  display: "flex",
+  gap: "10px",
+  marginBottom: "20px",
+},
+.navItem: {
+  padding: "8px 14px",
+  border: "1px solid #ccc",
+  borderRadius: "6px",
+  textDecoration: "none",
+  color: "#333",
+},
