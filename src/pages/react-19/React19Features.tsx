@@ -1,5 +1,6 @@
 import { useState, type ComponentType } from "react";
 import ActivityComponent from "./components/ActivityComponent";
+import OptimisticComponent from "./components/OptimisticComponent";
 
 type TabItem = {
   key: string;
@@ -13,7 +14,11 @@ const tabs: TabItem[] = [
     label: "<Activity /> 컴포넌트",
     component: ActivityComponent,
   },
-  { key: "useOptimistic", label: "useOptimistic" },
+  {
+    key: "useOptimistic",
+    label: "useOptimistic",
+    component: OptimisticComponent,
+  },
   { key: "useActionState", label: "useActionState / useFormStatus" },
   { key: "useHook", label: "use (data fetching)" },
   { key: "formActions", label: "Form Actions" },
@@ -30,7 +35,7 @@ const React19Features = () => {
           <button
             key={tab.key}
             onClick={() => setActiveTab(index)}
-            className="tab-button"
+            className={`tab-button ${activeTab === index ? "active" : ""}`}
           >
             {tab.label}
           </button>

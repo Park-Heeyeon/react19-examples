@@ -16,6 +16,12 @@ body {
   height: 100%;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 .page-container {
   padding: 20px;
 }
@@ -83,20 +89,60 @@ nav {
 
 /* 활성 탭 */
 .tab-button.active {
-  background: #ffffff;
-  color: #222;
-  border-bottom: 2px solid #ffffff;
-  position: relative;
-  top: 2px; /* 살짝 위로 올라가는 효과로 탭 느낌 */
+  border-bottom: 2px solid #314cabff;
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.05);
 }
 
 /* 콘텐츠 박스 */
-.content-box {
-  border: 1px solid #e0e4e9;
+.content-container {
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+  /* height: 600px; */
   border-radius: 0 12px 12px 12px;
-  background: #ffffff;
+  background: #ffffffff;
   padding: 24px;
   min-height: 140px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+}
+
+.btn-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-container button {
+  width: 200px;
+  height: 40px;
+  margin-bottom: 10px;
+  background: #161e3dff;
+  color: #fff;
+}
+
+.box-container {
+  display: flex;
+  flex-derection: column;
+  justify-content: center;
+  gap: 50px;
+}
+
+.box {
+  width: 250px;
+  height: 250px;
+  border: 3px solid #b8b8b8ff;
+  text-align: center;
+  padding-top: 100px;
+  border-radius: 10px;
+}
+
+.box-btn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.box-btn button {
+  margin: 10px 0;
+  background: #bfc4dbff;
 }
