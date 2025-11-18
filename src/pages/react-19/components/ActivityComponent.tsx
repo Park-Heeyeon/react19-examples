@@ -1,10 +1,8 @@
-"use client";
-
 import { useState, Activity } from "react";
 
 const ActivityExample = () => {
   const [visible, setVisible] = useState<boolean>(true);
-  const toggle = () => setVisible((v) => !v);
+  const toggle = () => setVisible((v: boolean) => !v);
 
   return (
     <div className="content-container">
@@ -31,7 +29,7 @@ const ActivityExample = () => {
 };
 
 const SubComponent = ({ title }: { title: string }) => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState<number>(0);
 
   const handleBtnClick = (type: string) => {
     if (type === "increment") {

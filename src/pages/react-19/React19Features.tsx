@@ -1,4 +1,4 @@
-import { useState, type ComponentType } from "react";
+import { Activity, useState, type ComponentType } from "react";
 import ActivityComponent from "./components/ActivityComponent";
 import OptimisticComponent from "./components/OptimisticComponent";
 
@@ -26,7 +26,6 @@ const tabs: TabItem[] = [
 
 const React19Features = () => {
   const [activeTab, setActiveTab] = useState<number>(0);
-  const ActiveComponent = tabs[activeTab].component;
 
   return (
     <div className="page-container">
@@ -43,7 +42,14 @@ const React19Features = () => {
       </div>
 
       <div className="content-box">
-        {ActiveComponent ? <ActiveComponent /> : <div>준비 중 입니다.</div>}
+        {tabs.map((tab, index) => (
+          <Activity
+            key={index}
+            mode={activeTab === index ? "visible" : "hidden"}
+          >
+            {tab.component ? <tab.component /> : <div>준비중입니다.</div>}
+          </Activity>
+        ))}
       </div>
     </div>
   );
