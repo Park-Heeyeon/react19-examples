@@ -1,6 +1,10 @@
 import { Activity, useState, type ComponentType } from "react";
-import ActivityComponent from "./components/ActivityComponent";
-import OptimisticComponent from "./components/OptimisticComponent";
+import {
+  ActivityComponentExample,
+  UseExample,
+  UseOptimisticExample,
+} from "./components";
+import UseActionStateExample from "./components/UseActionStateExample";
 
 type TabItem = {
   key: string;
@@ -12,16 +16,23 @@ const tabs: TabItem[] = [
   {
     key: "activityComponent",
     label: "<Activity /> 컴포넌트",
-    component: ActivityComponent,
+    component: ActivityComponentExample,
   },
   {
     key: "useOptimistic",
-    label: "useOptimistic",
-    component: OptimisticComponent,
+    label: "useOptimistic / useTransition",
+    component: UseOptimisticExample,
   },
-  { key: "useActionState", label: "useActionState / useFormStatus" },
-  { key: "useHook", label: "use (data fetching)" },
-  { key: "formActions", label: "Form Actions" },
+  {
+    key: "useActionState",
+    label: "useActionState / useFormStatus",
+    component: UseActionStateExample,
+  },
+  {
+    key: "useHook",
+    label: "use (data fetching)",
+    component: UseExample,
+  },
 ];
 
 const React19Features = () => {

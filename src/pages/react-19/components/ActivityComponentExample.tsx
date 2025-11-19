@@ -1,6 +1,6 @@
 import { useState, Activity } from "react";
 
-const ActivityExample = () => {
+const ActivityComponentExample = () => {
   const [visible, setVisible] = useState<boolean>(true);
   const toggle = () => setVisible((v: boolean) => !v);
 
@@ -54,4 +54,4 @@ const SubComponent = ({ title }: { title: string }) => {
   );
 };
 
-export default ActivityExample;
+export default ActivityComponentExample;
