@@ -1,16 +1,11 @@
-import { Activity, useState, type ComponentType } from "react";
+import { Activity, useState } from "react";
+import type { TabItem } from "./types";
 import {
+  ActionFormExample,
   ActivityComponentExample,
   UseExample,
   UseOptimisticExample,
-} from "./components";
-import UseActionStateExample from "./components/UseActionStateExample";
-
-type TabItem = {
-  key: string;
-  label: string;
-  component?: ComponentType;
-};
+} from "../components/example";
 
 const tabs: TabItem[] = [
   {
@@ -26,7 +21,7 @@ const tabs: TabItem[] = [
   {
     key: "useActionState",
     label: "useActionState / useFormStatus",
-    component: UseActionStateExample,
+    component: ActionFormExample,
   },
   {
     key: "useHook",
@@ -35,7 +30,7 @@ const tabs: TabItem[] = [
   },
 ];
 
-const React19Features = () => {
+const MainPage = () => {
   const [activeTab, setActiveTab] = useState<number>(0);
 
   return (
@@ -65,4 +60,4 @@ const React19Features = () => {
     </div>
   );
 };
-export default React19Features;
+export default MainPage;

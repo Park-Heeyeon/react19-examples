@@ -1,13 +1,9 @@
 import { useOptimistic, useState, useTransition, type FormEvent } from "react";
-import { Input } from "../../../components/ui/input";
-import { Button } from "../../../components/ui/button";
-import { Card, CardContent } from "../../../components/ui/card";
+import CommentCard from "./CommentCard";
+import { Button } from "../../ui/button";
+import { Input } from "../../ui/input";
+import type { CommentType } from "./types";
 
-interface CommentType {
-  id: number;
-  text: string;
-  isLiked: boolean;
-}
 const UseOptimisticExample = () => {
   const [text, setText] = useState<string>("");
   const [comments, setComments] = useState<CommentType[]>([]);
@@ -78,7 +74,7 @@ const UseOptimisticExample = () => {
         ) : (
           <>
             {optimisticComments.map((comment) => (
-              <CardComponent key={comment.id} comment={comment} />
+              <CommentCard key={comment.id} comment={comment} />
             ))}
           </>
         )}
@@ -106,15 +102,4 @@ const UseOptimisticExample = () => {
   );
 };
 
-const CardComponent = ({ comment }: { comment: CommentType }) => {
-  const { text } = comment;
-
-  return (
-    <Card className="w-full p-4 bg-[#f9f9f9] mb-4">
-      <CardContent className="flex items-center p-0">
-        <p className="flex-1 flex items-center text-sm">{text}</p>
-      </CardContent>
-    </Card>
-  );
-};
 export default UseOptimisticExample;
