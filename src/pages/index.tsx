@@ -10,7 +10,7 @@ import {
 const tabs: TabItem[] = [
   {
     key: "activityComponent",
-    label: "<Activity /> 컴포넌트",
+    label: "<Activity />",
     component: ActivityComponentExample,
   },
   {
@@ -19,7 +19,7 @@ const tabs: TabItem[] = [
     component: UseOptimisticExample,
   },
   {
-    key: "useActionState",
+    key: "actionForm",
     label: "useActionState / useFormStatus",
     component: ActionFormExample,
   },
