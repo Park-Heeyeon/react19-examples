@@ -12,3 +12,6 @@ export * from "./optimistic/types";
 
 // use
 export { default as UseExample } from "./use/UseExample";
+
+// compiler
+export { default as ReactCompilerExample } from "./compiler/ReactCompilerExample";

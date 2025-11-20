@@ -3,6 +3,7 @@ import type { TabItem } from "./types";
 import {
   ActionFormExample,
   ActivityComponentExample,
+  ReactCompilerExample,
   UseExample,
   UseOptimisticExample,
 } from "../components/example";
@@ -28,6 +29,11 @@ const tabs: TabItem[] = [
     label: "use (data fetching)",
     component: UseExample,
   },
+  {
+    key: "reactCompiler",
+    label: "React Compiler",
+    component: ReactCompilerExample,
+  },
 ];
 
 const MainPage = () => {
@@ -47,7 +53,7 @@ const MainPage = () => {
         ))}
       </div>
 
-      <div className="content-box">
+      <div className="content-container">
         {tabs.map((tab, index) => (
           <Activity
             key={index}

@@ -67,7 +67,7 @@ const UseOptimisticExample = () => {
   };
 
   return (
-    <div className="content-container">
+    <>
       <div className="comment-area">
         {optimisticComments.length === 0 ? (
           <div className="not-comment">아직 등록된 댓글이 없습니다.</div>
@@ -98,7 +98,7 @@ const UseOptimisticExample = () => {
           </Button>
         </form>
       </div>
-    </div>
+    </>
   );
 };
 

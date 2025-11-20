@@ -48,7 +48,7 @@ const loginAction = async (
 };
 
 // useActionState 예시 컴포넌트
-const ActionStateForm = () => {
+const ActionFormExample = () => {
   const [id, setId] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
@@ -61,7 +61,7 @@ const ActionStateForm = () => {
   });
 
   return (
-    <div className="content-container flex justify-center">
+    <div className="flex justify-center h-[450px]">
       <div className="flex items-center px-16 rounded-lg space-y-4 mt-5 border bg-gray-100">
         <form action={submitAction} className="flex flex-col gap-3">
           <div>
@@ -106,4 +106,4 @@ const ActionStateForm = () => {
     </div>
   );
 };
-export default ActionStateForm;
+export default ActionFormExample;

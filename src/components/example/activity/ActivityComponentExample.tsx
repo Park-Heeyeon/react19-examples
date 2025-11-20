@@ -6,7 +6,7 @@ const ActivityComponentExample = () => {
   const toggle = () => setVisible((v: boolean) => !v);
 
   return (
-    <div className="content-container">
+    <>
       <div className="btn-container">
         <button onClick={toggle}>{visible ? "hide" : "show"}</button>
       </div>
@@ -25,7 +25,7 @@ const ActivityComponentExample = () => {
           </Activity>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
