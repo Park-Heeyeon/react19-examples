@@ -9,7 +9,7 @@ const FormStatusButton = () => {
     <Button
       type="submit"
       variant="outline"
-      className="w-[200px] h-full !bg-[#6382b0ff] !text-white mx-auto mt-4"
+      className="w-[200px] h-full !bg-[#161e3dff] !text-white mx-auto mt-4"
       disabled={pending}
     >
       {pending ? "로그인 중..." : "로그인"}

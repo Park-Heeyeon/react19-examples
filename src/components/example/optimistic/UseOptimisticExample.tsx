@@ -91,7 +91,7 @@ const UseOptimisticExample = () => {
           <Button
             type="submit"
             variant="outline"
-            className="w-[100px] h-full !bg-[#6382b0ff] !text-white"
+            className="w-[100px] h-full !bg-[#161e3dff] !text-white"
             disabled={isPending}
           >
             {isPending ? "등록 중" : "등록"}
