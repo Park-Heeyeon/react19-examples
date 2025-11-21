@@ -53,7 +53,17 @@ const MainPage = () => {
         ))}
       </div>
 
-      <div className="content-container">
+      <div
+        className="mx-auto
+                  w-full max-w-7xl
+                  min-h-[140px]
+                  bg-white
+                  p-6
+                  rounded-tr-none rounded-tl-lg rounded-br-lg rounded-bl-lg
+                  shadow-md
+                  md:p-8
+                  lg:min-h-[500px]"
+      >
         {tabs.map((tab, index) => (
           <Activity
             key={index}

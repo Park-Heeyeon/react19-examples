@@ -67,10 +67,13 @@ const UseOptimisticExample = () => {
   };
 
   return (
-    <>
-      <div className="comment-area">
+    <div className="w-full h-full grid grid-rows-[8fr_2fr]">
+      {/* 댓글 영역 */}
+      <div className="overflow-y-auto p-4 md:p-6">
         {optimisticComments.length === 0 ? (
-          <div className="not-comment">아직 등록된 댓글이 없습니다.</div>
+          <div className="text-center text-gray-500 py-8">
+            아직 등록된 댓글이 없습니다.
+          </div>
         ) : (
           <>
             {optimisticComments.map((comment) => (
@@ -79,26 +82,27 @@ const UseOptimisticExample = () => {
           </>
         )}
       </div>
-      <div className="input-area">
+
+      {/* 입력 영역 */}
+      <div className="border-t border-gray-200 p-4 md:p-6">
         <form onSubmit={handleSubmit} className="flex w-full gap-2 h-full">
           <Input
             type="text"
+            className="flex-1 px-4 py-2 h-full"
             placeholder="댓글을 입력해 주세요"
-            className="h-full px-4"
             value={text}
             onChange={(e) => setText(e.target.value)}
           />
           <Button
             type="submit"
-            variant="outline"
-            className="w-[100px] h-full !bg-[#161e3dff] !text-white"
+            className="w-[90px] md:w-[120px] h-full !bg-[#161e3dff] !text-white"
             disabled={isPending}
           >
             {isPending ? "등록 중" : "등록"}
           </Button>
         </form>
       </div>
-    </>
+    </div>
   );
 };
 
